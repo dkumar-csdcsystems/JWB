@@ -19,6 +19,10 @@
 		4D5CB486193C831A001378EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5CB46E193C831A001378EE /* UIKit.framework */; };
 		4D5CB48E193C831A001378EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB48C193C831A001378EE /* InfoPlist.strings */; };
 		4D5CB490193C831A001378EE /* JWBNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB48F193C831A001378EE /* JWBNativeTests.m */; };
+		4D5CB49A193C881F001378EE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB499193C881F001378EE /* Storyboard.storyboard */; };
+		4D5CB49E193C88DA001378EE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB49D193C88DA001378EE /* LoginViewController.m */; };
+		4D5CB4A1193C90E8001378EE /* LoginPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB4A0193C90E8001378EE /* LoginPopoverViewController.m */; };
+		4D5CB4A4193C9B06001378EE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB4A3193C9B06001378EE /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		4D5CB48B193C831A001378EE /* JWBNativeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JWBNativeTests-Info.plist"; sourceTree = "<group>"; };
 		4D5CB48D193C831A001378EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D5CB48F193C831A001378EE /* JWBNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWBNativeTests.m; sourceTree = "<group>"; };
+		4D5CB499193C881F001378EE /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		4D5CB49C193C88DA001378EE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4D5CB49D193C88DA001378EE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4D5CB49F193C90E8001378EE /* LoginPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPopoverViewController.h; sourceTree = "<group>"; };
+		4D5CB4A0193C90E8001378EE /* LoginPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPopoverViewController.m; sourceTree = "<group>"; };
+		4D5CB4A2193C9B06001378EE /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		4D5CB4A3193C9B06001378EE /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,8 @@
 		4D5CB470193C831A001378EE /* JWBNative */ = {
 			isa = PBXGroup;
 			children = (
+				4D5CB49B193C889B001378EE /* ViewController */,
+				4D5CB499193C881F001378EE /* Storyboard.storyboard */,
 				4D5CB479193C831A001378EE /* AppDelegate.h */,
 				4D5CB47A193C831A001378EE /* AppDelegate.m */,
 				4D5CB47C193C831A001378EE /* Images.xcassets */,
@@ -142,6 +155,19 @@
 				4D5CB48C193C831A001378EE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D5CB49B193C889B001378EE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D5CB49C193C88DA001378EE /* LoginViewController.h */,
+				4D5CB49D193C88DA001378EE /* LoginViewController.m */,
+				4D5CB49F193C90E8001378EE /* LoginPopoverViewController.h */,
+				4D5CB4A0193C90E8001378EE /* LoginPopoverViewController.m */,
+				4D5CB4A2193C9B06001378EE /* SettingViewController.h */,
+				4D5CB4A3193C9B06001378EE /* SettingViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +247,7 @@
 			files = (
 				4D5CB475193C831A001378EE /* InfoPlist.strings in Resources */,
 				4D5CB47D193C831A001378EE /* Images.xcassets in Resources */,
+				4D5CB49A193C881F001378EE /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +268,9 @@
 			files = (
 				4D5CB47B193C831A001378EE /* AppDelegate.m in Sources */,
 				4D5CB477193C831A001378EE /* main.m in Sources */,
+				4D5CB4A1193C90E8001378EE /* LoginPopoverViewController.m in Sources */,
+				4D5CB49E193C88DA001378EE /* LoginViewController.m in Sources */,
+				4D5CB4A4193C9B06001378EE /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
