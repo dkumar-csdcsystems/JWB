@@ -37,8 +37,10 @@
 }
 
 -(IBAction)settingClicked:(UIButton *)sender{
+    /*
     SettingViewController *settingView = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingView"];
     [self presentViewController:settingView animated:true completion:nil];
+     */
 }
 
 /*
@@ -51,10 +53,10 @@
     // Pass the selected object to the new view controller.
     
 }
-
-
-//- (IBAction)unwindToPopoverViewController:(UIStoryboardSegue *)unwindSegue{
-//
-//}
 */
+
+- (IBAction)unwindToPopoverViewController:(UIStoryboardSegue *)unwindSegue{
+
+}
+
 @end

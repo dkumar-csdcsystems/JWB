@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D34DFDB193DB0A000400C0A /* LocalStoreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D34DFDA193DB0A000400C0A /* LocalStoreHelper.m */; };
+		4D34DFDF193DB48A00400C0A /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D34DFDE193DB48A00400C0A /* Setting.m */; };
+		4D34DFE2193DCCA100400C0A /* JsonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D34DFE1193DCCA100400C0A /* JsonHelper.m */; };
+		4D34DFE5193DD92E00400C0A /* ServiceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D34DFE4193DD92E00400C0A /* ServiceHelper.m */; };
+		4D34DFE9193DE9C500400C0A /* ServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D34DFE8193DE9C500400C0A /* ServerResponse.m */; };
 		4D5CB46B193C831A001378EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5CB46A193C831A001378EE /* Foundation.framework */; };
 		4D5CB46D193C831A001378EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5CB46C193C831A001378EE /* CoreGraphics.framework */; };
 		4D5CB46F193C831A001378EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5CB46E193C831A001378EE /* UIKit.framework */; };
@@ -36,6 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D34DFD9193DB0A000400C0A /* LocalStoreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalStoreHelper.h; sourceTree = "<group>"; };
+		4D34DFDA193DB0A000400C0A /* LocalStoreHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStoreHelper.m; sourceTree = "<group>"; };
+		4D34DFDD193DB48A00400C0A /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		4D34DFDE193DB48A00400C0A /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		4D34DFE0193DCCA100400C0A /* JsonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonHelper.h; sourceTree = "<group>"; };
+		4D34DFE1193DCCA100400C0A /* JsonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonHelper.m; sourceTree = "<group>"; };
+		4D34DFE3193DD92E00400C0A /* ServiceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceHelper.h; sourceTree = "<group>"; };
+		4D34DFE4193DD92E00400C0A /* ServiceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceHelper.m; sourceTree = "<group>"; };
+		4D34DFE7193DE9C500400C0A /* ServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerResponse.h; sourceTree = "<group>"; };
+		4D34DFE8193DE9C500400C0A /* ServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerResponse.m; sourceTree = "<group>"; };
 		4D5CB467193C831A001378EE /* JWBNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWBNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5CB46A193C831A001378EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4D5CB46C193C831A001378EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +100,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D34DFDC193DB46A00400C0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D34DFDD193DB48A00400C0A /* Setting.h */,
+				4D34DFDE193DB48A00400C0A /* Setting.m */,
+				4D34DFE7193DE9C500400C0A /* ServerResponse.h */,
+				4D34DFE8193DE9C500400C0A /* ServerResponse.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4D34DFE6193DD93700400C0A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D34DFE3193DD92E00400C0A /* ServiceHelper.h */,
+				4D34DFE4193DD92E00400C0A /* ServiceHelper.m */,
+				4D34DFE0193DCCA100400C0A /* JsonHelper.h */,
+				4D34DFE1193DCCA100400C0A /* JsonHelper.m */,
+				4D34DFD9193DB0A000400C0A /* LocalStoreHelper.h */,
+				4D34DFDA193DB0A000400C0A /* LocalStoreHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		4D5CB45E193C831A001378EE = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +157,8 @@
 		4D5CB470193C831A001378EE /* JWBNative */ = {
 			isa = PBXGroup;
 			children = (
+				4D34DFE6193DD93700400C0A /* Helpers */,
+				4D34DFDC193DB46A00400C0A /* Model */,
 				4D5CB49B193C889B001378EE /* ViewController */,
 				4D5CB499193C881F001378EE /* Storyboard.storyboard */,
 				4D5CB479193C831A001378EE /* AppDelegate.h */,
@@ -266,10 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D34DFDF193DB48A00400C0A /* Setting.m in Sources */,
+				4D34DFE2193DCCA100400C0A /* JsonHelper.m in Sources */,
 				4D5CB47B193C831A001378EE /* AppDelegate.m in Sources */,
+				4D34DFE9193DE9C500400C0A /* ServerResponse.m in Sources */,
+				4D34DFDB193DB0A000400C0A /* LocalStoreHelper.m in Sources */,
 				4D5CB477193C831A001378EE /* main.m in Sources */,
 				4D5CB4A1193C90E8001378EE /* LoginPopoverViewController.m in Sources */,
 				4D5CB49E193C88DA001378EE /* LoginViewController.m in Sources */,
+				4D34DFE5193DD92E00400C0A /* ServiceHelper.m in Sources */,
 				4D5CB4A4193C9B06001378EE /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +515,7 @@
 				4D5CB495193C831A001378EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D5CB496193C831A001378EE /* Build configuration list for PBXNativeTarget "JWBNativeTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +524,7 @@
 				4D5CB498193C831A001378EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

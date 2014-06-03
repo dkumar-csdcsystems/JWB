@@ -16,7 +16,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *textPassword;
 
 - (IBAction)infoClicked:(UIButton *)sender;
-
 - (IBAction)unwindToLoginViewController:(UIStoryboardSegue *)unwindSegue;
-
+- (IBAction)loginClicked:(id)sender;
 @end

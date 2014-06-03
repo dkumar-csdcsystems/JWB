@@ -38,6 +38,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginClicked:" destination="jbx-T3-V6X" eventType="touchUpInside" id="Rio-VR-fix"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -58,7 +61,7 @@
                                 <rect key="frame" x="726" y="942" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="n2R-pP-HdE" kind="modal" id="ZCt-L0-vF3"/>
+                                    <segue destination="n2R-pP-HdE" kind="modal" id="Udw-HK-Gmc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,6 +77,10 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="textLoginId" destination="1nw-j5-jUF" id="McB-ny-Eyx"/>
+                        <outlet property="textPassword" destination="8iN-e1-AoN" id="B9Z-wX-t6X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qko-EN-qJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +133,16 @@
                                             <outlet property="delegate" destination="n2R-pP-HdE" id="OOO-hA-X3k"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpR-sr-NAJ">
+                                        <rect key="frame" x="431" y="145" width="64" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vDy-QN-fYz" kind="unwind" identifier="CancelSetting" unwindAction="unwindToLoginViewController:" id="BIZ-gW-L8g"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-Bi-Chy">
                                         <rect key="frame" x="510" y="145" width="60" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,17 +150,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vDy-QN-fYz" kind="unwind" identifier="UpdateSetting" unwindAction="unwindToLoginViewController:" id="tYz-Nj-ovd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpR-sr-NAJ">
-                                        <rect key="frame" x="438" y="145" width="64" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vDy-QN-fYz" kind="unwind" identifier="CancelSetting" unwindAction="unwindToPopoverViewController:" id="lom-OF-lJA"/>
+                                            <segue destination="vDy-QN-fYz" kind="unwind" identifier="UpdateSetting" unwindAction="unwindToLoginViewController:" id="Ulc-rR-HpW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -191,6 +198,7 @@
                                 </state>
                                 <connections>
                                     <action selector="settingClicked:" destination="GxD-zT-gzg" eventType="touchUpInside" id="KhM-cb-i4l"/>
+                                    <segue destination="n2R-pP-HdE" kind="modal" id="AnS-tz-rG9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VX-zM-d34">
@@ -207,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Upf-ju-kZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1861" y="-1614"/>
+            <point key="canvasLocation" x="-1705" y="-1398"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -215,4 +223,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Udw-HK-Gmc"/>
+    </inferredMetricsTieBreakers>
 </document>

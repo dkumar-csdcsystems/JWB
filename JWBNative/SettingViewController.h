@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Setting.h"
 
 @interface SettingViewController : UIViewController<UITextFieldDelegate>
 
@@ -15,8 +16,8 @@
 @property (nonatomic, retain) IBOutlet UITextField *textServiceUrl;
 @property (nonatomic, retain) IBOutlet UITextField *textConnectionCache;
 
-@property (nonatomic, retain) NSString *ServiceUrl;
-@property (nonatomic, retain) NSString *ConnectionCache;
+@property (nonatomic, strong) Setting* setting;
 
+@property (nonatomic) BOOL Update;
 
 @end

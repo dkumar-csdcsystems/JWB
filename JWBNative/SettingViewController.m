@@ -7,6 +7,7 @@
 //
 
 #import "SettingViewController.h"
+#import "LocalStoreHelper.h"
 
 @interface SettingViewController ()
 
@@ -26,7 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.setting = [Setting getPreference];
+    if(self.setting != nil){
+        [self.textConnectionCache setText:self.setting.ConnectionCache];
+        [self.textServiceUrl setText:self.setting.ServiceUrl];
+    }
+   
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,8 +49,13 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    self.ServiceUrl = self.textServiceUrl.text;
-    self.ConnectionCache = self.textConnectionCache.text;
+    //self.ServiceUrl = self.textServiceUrl.text;
+    //self.ConnectionCache = self.textConnectionCache.text;
+    if(self.setting == nil){
+        self.setting = [[Setting alloc] init];
+    }
+    self.setting.ConnectionCache = self.textConnectionCache.text;
+    self.setting.ServiceUrl = self.textServiceUrl.text;
 }
 
 
@@ -51,6 +64,9 @@
         if([self.textServiceUrl.text isEqualToString:@""] || [self.textConnectionCache.text isEqualToString:@""]){
             return NO;
         }
+        self.Update = true;
+    } else {
+        self.Update = false;
     }
     
     return YES;
