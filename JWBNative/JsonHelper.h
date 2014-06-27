@@ -11,6 +11,7 @@
 @interface JsonHelper : NSObject
 
 +(NSString *)toJsonString: (NSDictionary *) dictionary error:(NSError **) error;
-+(NSDictionary*)toDictionary: (NSString *)jsonString error:(NSError **)error;
-
++(NSDictionary *)toDictionary: (NSString *)jsonString error:(NSError **)error;
++(NSString *)decodeBase64: (NSString *)base64String;
++(NSString *)encodeBase64: (NSString *)plainString;
 @end

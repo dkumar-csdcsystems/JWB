@@ -63,13 +63,29 @@
 }
 
 
-+(void)prepareAndSend:(NSString *)path PostData: (NSDictionary *)data onCompletion:(RequestCompletionHandler)callback{
++(void)prepareAndSend:(NSString *)path PostData: (NSDictionary *)data onCompletion:(ResponseHandler)callback{
     NSError *error = nil;
     NSString *jsonString = [JsonHelper toJsonString:data error:&error];
+    
     if(jsonString && !error){
+        NSLog(@"%@",jsonString);
         NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                     jsonString,@"requestJSON", nil];
-        [ServiceHelper sendRequest:path PostData:dictionary onCompletion:callback];
+        [ServiceHelper sendRequest:path
+                          PostData:dictionary
+                      onCompletion:^(NSString *response, NSError *error){
+                          ServerResponse *serverResponse = nil;
+                          if(error){
+                              //[self stopFetching:@"Failed to load"];
+                              NSLog(@"%@", error);
+                              
+                          } else {
+                              serverResponse = [ServerResponse parseJson:response];
+                              NSLog(@"%@",response);
+                              //[self stopFetching:result];
+                          }
+                          if(callback)callback(serverResponse, error);
+                      }];
     }else {
         NSLog(@"%@", error);
     }

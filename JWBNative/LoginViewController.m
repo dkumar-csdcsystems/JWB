@@ -89,17 +89,36 @@
             
             [ServiceHelper prepareAndSend:setting.ServiceUrl
                               PostData:params
-                          onCompletion:^(NSString *result, NSError *error) {
+                          onCompletion:^(ServerResponse *response, NSError *error) {
                 //dispatch_get_main_queue - get ui thread
                 //dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    if(error){
-                        //[self stopFetching:@"Failed to load"];
-                        NSLog(@"%@", error);
+                    if(error==nil){
+                       
+                        if(response){
+                            if(response.Status==200){
+                                if(response.Error==nil){
+                                    NSString *jsonString = [JsonHelper decodeBase64:response.Response];
+                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Successful"
+                                                                                    message:jsonString
+                                                                                   delegate:nil
+                                                                          cancelButtonTitle:@"OK"
+                                                                          otherButtonTitles:nil];
+                                    [alert show];
+                                    
+                                } else {
+                                    NSLog(@"Login Failed with Error: %@", response.Error);
+                                }
+                            } else {
+                                NSLog(@"Login Failed Response Status: %d", response.Status);
+                            }
+                        } else {
+                            NSLog(@"Login Failed Response is null");
+                        }
+                        
                     } else {
-                        ServerResponse *response = [ServerResponse parseJson:result];
-                        //NSLog(@"%@",result);
-                        //[self stopFetching:result];
+                        NSLog(@"Request Failed with error: %@", error.description);
+
                     }
                 });
             }];

@@ -64,14 +64,23 @@
                                     <segue destination="n2R-pP-HdE" kind="modal" id="Udw-HK-Gmc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Judges Work Bench" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49j-DV-Prq">
+                                <rect key="frame" x="238" y="360" width="293" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="MDa-yO-mkQ" secondAttribute="centerX" id="GnO-8o-lsf"/>
                             <constraint firstItem="JVz-NI-dgw" firstAttribute="leading" secondItem="PhL-l4-zv8" secondAttribute="leading" constant="20" id="LaZ-XI-0kI"/>
+                            <constraint firstItem="MDa-yO-mkQ" firstAttribute="top" secondItem="49j-DV-Prq" secondAttribute="bottom" constant="8" id="MGT-fO-hcG"/>
                             <constraint firstItem="6Ht-29-eqO" firstAttribute="top" secondItem="JVz-NI-dgw" secondAttribute="bottom" constant="16" id="a5J-cF-b8m"/>
                             <constraint firstItem="6Ht-29-eqO" firstAttribute="top" secondItem="gdz-i9-LeX" secondAttribute="bottom" constant="16" id="bSE-br-T3D"/>
                             <constraint firstAttribute="trailing" secondItem="gdz-i9-LeX" secondAttribute="trailing" constant="20" id="cMf-hk-wnj"/>
+                            <constraint firstAttribute="centerX" secondItem="49j-DV-Prq" secondAttribute="centerX" id="cPY-bh-4ty"/>
                             <constraint firstAttribute="centerY" secondItem="MDa-yO-mkQ" secondAttribute="centerY" id="mHp-Rc-vBU"/>
                         </constraints>
                     </view>
@@ -84,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qko-EN-qJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1557" y="-447"/>
+            <point key="canvasLocation" x="-2545" y="-243"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="8pz-sE-jBf">
@@ -176,7 +185,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SW-Oh-mYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="vDy-QN-fYz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-693" y="-1593"/>
+            <point key="canvasLocation" x="-917" y="-1114"/>
         </scene>
         <!--Login Popover View Controller-->
         <scene sceneID="Qt0-Fi-Rx9">
@@ -215,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Upf-ju-kZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1705" y="-1398"/>
+            <point key="canvasLocation" x="-2545" y="-1530"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -28,6 +28,7 @@
 		4D5CB49E193C88DA001378EE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB49D193C88DA001378EE /* LoginViewController.m */; };
 		4D5CB4A1193C90E8001378EE /* LoginPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB4A0193C90E8001378EE /* LoginPopoverViewController.m */; };
 		4D5CB4A4193C9B06001378EE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB4A3193C9B06001378EE /* SettingViewController.m */; };
+		4D9F2F57195D3F43001B8943 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9F2F56195D3F43001B8943 /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		4D5CB4A0193C90E8001378EE /* LoginPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPopoverViewController.m; sourceTree = "<group>"; };
 		4D5CB4A2193C9B06001378EE /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		4D5CB4A3193C9B06001378EE /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		4D9F2F55195D3F43001B8943 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		4D9F2F56195D3F43001B8943 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				4D34DFE1193DCCA100400C0A /* JsonHelper.m */,
 				4D34DFD9193DB0A000400C0A /* LocalStoreHelper.h */,
 				4D34DFDA193DB0A000400C0A /* LocalStoreHelper.m */,
+				4D9F2F55195D3F43001B8943 /* NSData+Base64.h */,
+				4D9F2F56195D3F43001B8943 /* NSData+Base64.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				4D34DFDF193DB48A00400C0A /* Setting.m in Sources */,
 				4D34DFE2193DCCA100400C0A /* JsonHelper.m in Sources */,
 				4D5CB47B193C831A001378EE /* AppDelegate.m in Sources */,
+				4D9F2F57195D3F43001B8943 /* NSData+Base64.m in Sources */,
 				4D34DFE9193DE9C500400C0A /* ServerResponse.m in Sources */,
 				4D34DFDB193DB0A000400C0A /* LocalStoreHelper.m in Sources */,
 				4D5CB477193C831A001378EE /* main.m in Sources */,
@@ -374,7 +380,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kumar Dharmendra (5NEKCAHY24)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -413,7 +419,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: CSDC Systems Inc. (96KW68732S)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -439,6 +445,7 @@
 				GCC_PREFIX_HEADER = "JWBNative/JWBNative-Prefix.pch";
 				INFOPLIST_FILE = "JWBNative/JWBNative-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=*]" = "7D912C9F-FAD9-4400-BD9F-D408090D0E08";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -452,6 +459,7 @@
 				GCC_PREFIX_HEADER = "JWBNative/JWBNative-Prefix.pch";
 				INFOPLIST_FILE = "JWBNative/JWBNative-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=*]" = "7F37354B-66D1-4071-A2B4-CC1711AA2AA0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
